@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <script>
+        function sum() {
+            let i=0,n=0,s=0;
+             n = prompt('Donner un entier N');
+             for(i=0;i<n;i++){
+                 s+=i;
+             }
+             alert("La somme des "+n+" premier nombre est "+s);
+        }
+        function minMax(){
+            let i,n,max,min,x;
+            n = prompt('Donner un entier N > 0');
+            x=[];
+            for(i=0;i<n;i++){
+                let k= prompt('Donner un entier N > 0');
+                x.push(k);
+            }
+            min=x[0];
+            max=x[0];
+            for(i=0;i<n;i++){
+                if(min>x[i]){
+                    min=x[i];
+                }
+                if(max<x[i]){
+                    max=x[i];
+                }
+            }
+            alert("Le Minimun des valeurs est:"+min+"le Maximum est : "+max)
+        }
+        function quotientReste(){
+            let a,b,q,r;
+            a=prompt('Donner un entier a');
+            b=prompt('Donner un entier b');
+            q=0,r=a;
+            while (r>b) {
+                q+=1;
+                r-=b;
+            }
+            alert("le quotient de "+a+"/"+b +" est de "+q +". Le reste de "+a+"/"+b +" est de "+b);
+        }
+        function produit(){
+            let a,b,p,i;
+            a=prompt('Donner un entier a');
+            b=prompt('Donner un entier b');
+            if(a==0 || b==0){
+                p=0;
+            }
+            else{
+                if(a>b){
+                    p=a;
+                    for(i=2;i>b;i--){
+                        p+=a;
+                    }
+                }
+                else{
+                    p=b;
+                    for(i=2;i>a;i--){
+                        p+=b;
+                        console.log(p);
+                    }
+                }
+            }
+            alert("le produit de "+a+" et "+b +" est de "+p);
+        }
+        function divisibe(){
+            let a,b,p,i;
+            a=prompt('Donner un entier a');
+            b=prompt('Donner un entier b');
+            if(a%b==0){
+                alert(""+a+" est divisible par"+b );
+            }
+            else{
+                alert(""+a+" n'est pas divisible par"+b );
+
+            }
+        }
+        function diviseur(){
+            let x,div=[];
+            x=prompt('Donner un entier x');
+            let s="";
+            for(let i=x;i>=1;i--){
+                if(x%i==0){
+                    div.push(i);
+                    s+=i+",";
+                }
+            }
+            
+            alert("Les diviseurs de "+x+" sont "+s);
+        }
+        function estPremier(){
+            let x,div=[];
+            x=prompt('Donner un entier x');
+            for(let i=x;i>=1;i--){
+                if(x%i==0){
+                    div.push(i);
+                }
+            }
+            if(div.length>2){
+                alert(" "+x+" n'est pas premier");
+            }
+            else{
+                alert(" "+x+" est  premier");
+
+            }
+        }
+        // sum();
+        // minMax();
+        // quotientReste();
+        //produit();
+        // divisibe();
+        //diviseur();
+    </script>
+</body>
+</html>
